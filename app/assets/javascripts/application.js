@@ -13,6 +13,7 @@
 //= require jquery
 //= require dropzone
 //= require bootstrap-sprockets
+//= require private_pub
 //= require toastr
 //= require rails-ujs
 //= require turbolinks

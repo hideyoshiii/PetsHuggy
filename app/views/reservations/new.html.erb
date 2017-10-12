@@ -1,0 +1,59 @@
+<%= render 'partial/navbar' %>
+
+<div class="container">
+    <!-- listing content -->
+  <div class="col-md-8 col-md-offset-2">
+    <div class="thumbnail">
+      <%= image_tag @listing.photos[0].image.url %>
+      <%= image_tag @listing.user.image,class:"img-circle profile-1 row-space-top-3" %>
+      <div class="caption">
+        <h4 class="text-center row-space-4">名前: <%= @listing.user.name %></h4>
+        <h4 class="text-center row-space-4">チケットタイトル:<%= @listing.listing_title %></h4>
+
+        
+        </div>
+ 
+
+        <!--Stripe order and credit form -->
+
+        <!-- Send to reservations#create action -->
+        <%= form_for([@listing, @listing.reservations.new]) do |f| %>
+          
+          <%= hidden_field_tag :token %>
+
+          <!-- hashでまとめて送れないから、またパラメータを作る -->
+          <%= f.hidden_field :start_date, value: @start_date %>
+          <%= f.hidden_field :end_date, value: @end_date %>
+          <%= f.hidden_field :listing_id, value: @listing.id %>
+          <%= f.hidden_field :price_pernight,value: @price_pernight %>
+          <%= f.hidden_field :total_price, value:  @total_price %>
+
+          <div class='indicator'></div>
+          <div class="row">
+            <div class="text-center">
+              <button class='btn btn-danger btn-wide pay-button'><%= @price_pernight %>円を支払って購入する</button>  
+
+            </div>
+              
+          </div>
+            
+        <% end %>
+      </div>     
+    </div>    
+  </div>
+</div>
+
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+<script>
+  // You can select to pay either directly or via the platform, so
+  // we need both publishable keys here.
+  window.publishable = {
+    platform: "<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+  };
+  window.currentUserEmail = "<%= current_user.email %>";
+
+  window.totalPrice = "<%= @price_pernight %>";
+</script>
