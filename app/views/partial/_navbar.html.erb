@@ -16,13 +16,13 @@
       <ul class="nav navbar-nav navbar-right">
         <% if (!user_signed_in?) %>
           <!-- ログインしていない時 -->
-          <li><a href="http://antennach.com/ravoice/">旅人達のブログ</a></li>
+          <li><a href="http://antennach.com/ravoice/" target="_blank">旅人達のブログ</a></li>
           <li><%= link_to "チケットを発行する", new_listing_path %></li>
           <li><%= link_to "アカウント作成", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>
         <% else %>
           <!-- ログインしている時 -->
-          <li><a href="http://antennach.com/ravoice/">旅人達のブログ</a></li>
+          <li><a href="http://antennach.com/ravoice/" target="_blank">旅人達のブログ</a></li>
           <li>
             <%= link_to conversations_path do %>
               <i class="fa fa-envelope"></i> メッセージ

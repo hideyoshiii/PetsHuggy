@@ -1,5 +1,7 @@
 <%= render 'partial/navbar' %>
 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 <!-- ジャンボトロン -->
 <div class="jumbotron row-space-0" style="margin-top: -20px; background: none;">
     
@@ -56,15 +58,15 @@
                     </div>
                     <div class="row row-space-top-4" >
                         <div class="col-sm-3 col-xs-3 text-center" style="color:#fff;">
-                            <i class="fa fa-home fa-3x"></i>
+                            <i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>
                             <h5><%= @listing.home_type %></h5>
                         </div>
                         <div class="col-sm-3 col-xs-3 text-center" style="color:#fff;">
-                            <i class="fa fa-linux fa-3x" aria-hidden="true"></i>
+                            <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
                             <h5><%= @listing.pet_type %></h5>
                         </div>
                         <div class="col-sm-3 col-xs-3 text-center" style="color:#fff;">
-                            <i class="fa fa-bug fa-3x" aria-hidden="true"></i>
+                            <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
                             <h5><%= @listing.pet_size %></h5>
                         </div>
                     </div>

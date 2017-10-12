@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
         @start_date =  params[:reservation][:start_date]
         @end_date =  params[:reservation][:end_date]
         @price_pernight =  params[:reservation][:price_pernight]
-        @total_price =  params[:reservation][:total_price]
+        @total_price =  params[:reservation][:price_pernight]
       end
 
     def index
