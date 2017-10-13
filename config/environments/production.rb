@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #remember to change localhost to actual host
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'lec2-54-243-185-123.compute-1.amazonaws.com', port: 5432 }
 
   config.paperclip_defaults = {
     storage: :s3,
