@@ -28,4 +28,4 @@ production:
   host: ec2-54-243-185-123.compute-1.amazonaws.com
   database: da8suced262mbc
   password: bc587dcc587098ac43244bf94fab6c46a879f4c0f313741c4be52b00bd2dfbe1
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
