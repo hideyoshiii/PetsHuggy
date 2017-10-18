@@ -15,8 +15,8 @@
 						<div class="row">
 							<div class="col-md-12 select">
 								<div class="form-group">
-									<label>ジャンル</label>
-									<%= f.select :home_type, [["企画・アイデア","企画・アイデア"], ["写真・カメラ","写真・カメラ"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+									<label>カテゴリー</label>
+									<%= f.select :home_type, [["旅の企画・アイデア","旅の企画・アイデア"], ["写真・カメラ","写真・カメラ"], ["ブログ・Web関連","ブログ・Web関連"], ["英語・語学","英語・語学"], ["フリートーク・雑談","フリートーク・雑談"], ["その他","その他"]], {prompt:"カテゴリーを選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
 								</div>
 							</div>
 						</div>
@@ -26,7 +26,7 @@
 							<div class="col-md-12 select">
 								<div class="form-group">
                                 <label>形式</label>
-                                <%= f.text_field :pet_type, placeholder: "形式を記入して下さい", class: "form-control", required: "true" %>
+                                <%= f.text_field :pet_type, placeholder: "形式を記入してください (例　対面、オンライン、電話、メッセージなど)", class: "form-control", required: "true" %>
                            		</div>
 							</div>
 						</div>
@@ -37,8 +37,8 @@
 						<div class="row">
 							<div class="col-md-12 select">
 								<div class="form-group">
-                                <label>場所</label>
-                                <%= f.text_field :pet_size, placeholder: "場所・範囲を記入して下さい", class: "form-control", required: "true" %>
+                                <label>エリア</label>
+                                <%= f.text_field :pet_size, placeholder: "エリアを記入してください　(例　新宿、Skype、Messengerなど)", class: "form-control", required: "true" %>
                            		</div>
 									
 								

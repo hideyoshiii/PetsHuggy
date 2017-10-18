@@ -31,7 +31,7 @@ class ReservationsController < ApplicationController
       amount = params[:reservation][:price_pernight]
 
       #fee
-      fee = (amount.to_i * 0.1).to_i
+      fee = (amount.to_i * 0.164).to_i
 
       # Calculate the fee amount that goes to the application.
       begin
